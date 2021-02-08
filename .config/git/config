@@ -1,0 +1,6 @@
+[user]
+	email = thomas@thomasward.com
+	name = Thomas M Ward
+[core]
+	editor = nvim
+	excludesfile = /home/thomas/.config/git/global_ignore

@@ -8,7 +8,7 @@ https://www.atlassian.com/git/tutorials/dotfiles
 # neovim
 
 I use [vim-plug](https://github.com/junegunn/vim-plug). To set-up neovim
-and all the plugins on a new setup:
+and all the plugins that are listed in the `init.vim` on a new setup:
 
 1. Make sure neovim is installed
 2. Use the .config/nvim/init.vim provided

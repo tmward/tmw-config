@@ -1,5 +1,5 @@
 " vim-plug configuration
-call plug#begin('/home/thomas/.local/share/nvim/plugins')
+call plug#begin('$HOME/.local/share/nvim/plugins')
 
 Plug 'Olical/conjure'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

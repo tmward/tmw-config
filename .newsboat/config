@@ -1,0 +1,9 @@
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+datetime-format "%F %R"
+# May want this in the future
+#refresh-on-startup yes
+delete-read-articles-on-quit yes
+browser "firefox --new-tab %u"

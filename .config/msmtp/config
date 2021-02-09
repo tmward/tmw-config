@@ -1,0 +1,44 @@
+defaults
+
+port 587
+
+tls on
+
+account uva
+host smtp.gmail.com
+from tmw5ma@virginia.edu
+auth on
+user tmw5ma@virginia.edu
+passwordeval "decrypt-pass.sh ~/.config/msmtp/uva.pass"
+
+account tmwgmail
+host smtp.gmail.com
+from thomasward.tmw@gmail.com
+auth on
+user thomasward.tmw@gmail.com
+passwordeval "decrypt-pass.sh ~/.config/msmtp/gmail.pass"
+
+account fastmail
+host smtp.fastmail.com
+from thomasmward@fastmail.fm
+auth on
+user thomasmward@fastmail.fm
+passwordeval "decrypt-pass.sh ~/.config/msmtp/fastmail.pass"
+
+account thomasward
+host smtp.fastmail.com
+from thomas@thomasward.com
+auth on
+user thomasmward@fastmail.fm
+passwordeval "decrypt-pass.sh ~/.config/msmtp/fastmail.pass"
+
+account outlook
+host 127.0.0.1
+port 1025
+from tmward@mgh.harvard.edu
+auth plain
+user tmward@mgh.harvard.edu
+passwordeval "decrypt-pass.sh ~/.config/msmtp/mgh.pass"
+tls off
+
+account default : thomasward

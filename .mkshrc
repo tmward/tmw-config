@@ -1,0 +1,42 @@
+# use nvim for everything
+set -o vi
+SUDO_EDITOR=nvim
+VISUAL=nvim
+EDITOR=nvim
+export EDITOR VISUAL SUDO_EDITOR 
+
+# PATH additions
+if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+if [ -d "$HOME/.cargo/bin" ]; then
+    PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+export PATH
+
+# make fzf use fd
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
+# aliases
+alias doas="sudo"
+alias v="nvim"
+alias t="todo.sh"
+alias rm="rm -I"
+alias weather="curl wttr.in"
+alias yk-amazon="ykman oath code amazon | cut -d ' ' -f3 | wl-copy"
+alias yk-mgh="ykman oath code mgh:tmw28@partners.org | cut -d ' ' -f3 | wl-copy"
+alias snip="slurp | grim -g - ~/snip.png"
+alias mpg="mpg123 -o pulse"
+# for storing config files in git repo
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+
+# figure out password
+function pwage {
+	age -d /home/thomas/files/passwords/mahSecrets.age | grep -i "$1"
+}
+
+# make random directories to work in
+function tmp {
+  cd "$(mktemp -d /tmp/$1.XXXX)"
+}

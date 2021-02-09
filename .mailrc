@@ -1,0 +1,40 @@
+# All the examples require v15-compat!
+set v15-compat
+
+# Essential setting: select allowed character sets
+# (Have a look at the "Character sets" manual section)
+set sendcharsets=utf-8,iso-8859-1
+
+# A very kind option: when replying to a message, first try to
+# use the same encoding that the original poster used herself!
+set reply-in-same-charset
+# When replying to or forwarding a message the comment and name
+# parts of email addresses are removed unless this variable is set
+set fullnames
+
+# When sending messages, wait until the Mail-Transfer-Agent finishs.
+set sendwait
+
+# Only use builtin MIME types, no mime.types(5) files.
+# That set is often sufficient, but look at the output of the
+# `mimetype' command to ensure this is true for you, too
+set mimetypes-load-control
+
+# Default directory where we act in (relative to $HOME if not absolute)
+#set folder=mailx
+# A leading "+" (often) means: under folder
+# record is used to save copies of sent messages, $DEAD is error storage
+# inbox: system mailbox, by default /var/mail/$USER: file %
+# $MBOX: secondary mailbox: file &
+#set MBOX=+mbox.mbox record=+sent.mbox DEAD=+dead.mbox
+#set inbox=+system.mbox
+
+# Define some shortcuts; now one may say, e.g., file mymbo
+#shortcut mymbo %:+mbox.mbox \
+#         myrec +sent.mbox
+
+# This is optional, but you should get the big picture
+# by reading the manual before you leave that off
+set from="Thomas Ward <thomas@thomasward.com>"
+
+set mta=file:///usr/bin/msmtp

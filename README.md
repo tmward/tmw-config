@@ -24,3 +24,9 @@ I use the MirBSD Korn shell, [mksh](http://www.mirbsd.org/mksh.htm),
 since it's portable, similar to OpenBSD's default ksh, and smaller than
 bash. Configuration is stored in `.mkshrc`. All those configuration
 settings are portable, so they will work in a `.bashrc` as well.
+
+# License
+
+All non-configuration files (aka the little shell scripts I wrote) are
+licensed under the ISC license. A copy is provided at the root of the
+repository.

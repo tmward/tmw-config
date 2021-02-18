@@ -33,6 +33,11 @@ alias mpg="mpg123 -o pulse"
 # for storing config files in git repo
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
+# janet config
+JANET_PATH="$HOME/src/janet"
+export JANET_PATH
+alias janet-repl="janet -e \"(import spork/netrepl) (netrepl/server)\""
+
 # figure out password
 function pwage {
 	age -d /home/thomas/files/passwords/mahSecrets.age | grep -i "$1"

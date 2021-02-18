@@ -19,6 +19,8 @@ export PATH
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # aliases
+alias mkpasswd="clipper.sh '$(randomstr)' 30"
+alias mkpasswd_alnum="clipper.sh '$(randomstr -c [:alnum:])' 30"
 alias doas="sudo"
 alias v="nvim"
 alias t="todo.sh"

@@ -33,7 +33,8 @@ alias mpg="mpg123 -o pulse"
 # for storing config files in git repo
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 # fascrs request interactive session
-alias interactive="salloc -p test --x11 --mem 8000 -t 0-12:00"
+alias interactive="salloc -p test --mem 8000 -t 0-12:00"
+alias interactive-x11="salloc -p test --x11 --mem 8000 -t 0-12:00"
 
 # janet config
 JANET_PATH="$HOME/src/janet"

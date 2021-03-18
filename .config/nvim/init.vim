@@ -34,6 +34,16 @@ set shiftwidth=4
 set expandtab
 " for git, writing, general life, wrap at 72 chars
 set textwidth=72
+" for python, use black preference of 88
+autocmd FileType python setlocal textwidth=88
+" R: tidyverse style guide preferences
+autocmd FileType r setlocal textwidth=80 tabstop=2 shiftwidth=2
+autocmd FileType rmd setlocal textwidth=80 tabstop=2 shiftwidth=2
+" md/latex: semantic line breaks, so disable textwidth
+autocmd FileType markdown setlocal textwidth=0
+autocmd FileType tex setlocal textwidth=0
+" no laws with the sql
+autocmd FileType sql setlocal textwidth=0
 
 " color preferences
 set background=dark

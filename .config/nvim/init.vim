@@ -62,8 +62,8 @@ set splitright
 set formatprg=par\ -q\ -w72
 
 " markdown as default file-format for vimwiki
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'},
+                     \ {'path': '~/work/SAIIL/docs/wiki/', 'syntax': 'markdown', 'ext': '.md'}]
 " prevent vimwiki from treating all md as a vimwiki
 let g:vimwiki_global_ext = 0
 

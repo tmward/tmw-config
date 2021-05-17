@@ -44,6 +44,8 @@ autocmd FileType markdown setlocal textwidth=0
 autocmd FileType tex setlocal textwidth=0
 " no laws with the sql
 autocmd FileType sql setlocal textwidth=0
+" keep tab for sh
+autocmd FileType sh setlocal textwidth=0 noexpandtab
 
 " color preferences
 set background=dark

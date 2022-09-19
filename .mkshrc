@@ -19,8 +19,6 @@ export PATH
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # aliases
-alias mkpasswd="clipper.sh '$(randomstr)' 30"
-alias mkpasswd_alnum="clipper.sh '$(randomstr -c [:alnum:])' 30"
 alias doas="sudo"
 alias v="nvim"
 alias t="todo.sh"
@@ -41,11 +39,6 @@ JANET_PATH="$HOME/src/janet"
 export JANET_PATH
 alias janet-repl="janet -e \"(import spork/netrepl) (netrepl/server)\""
 
-# figure out password
-function pwage {
-	age -d /home/thomas/files/passwords/mahSecrets.age | grep -i "$1"
-}
-
 # make random directories to work in
 function tmp {
   cd "$(mktemp -d /tmp/$1.XXXX)"
@@ -54,4 +47,11 @@ function tmp {
 # fix clock on WSL2
 if [ -n "$WSLENV" ]; then
     run_if_not.sh fix_wsl_clock.sh
+fi
+
+# set up gpg agent if on linux
+if [ -z "$WSLENV" ]; then
+    export GPG_TTY="$(tty)"
+    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    gpgconf --launch gpg-agent
 fi

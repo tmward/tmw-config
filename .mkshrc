@@ -44,11 +44,6 @@ function tmp {
   cd "$(mktemp -d /tmp/$1.XXXX)"
 }
 
-# fix clock on WSL2
-if [ -n "$WSLENV" ]; then
-    run_if_not.sh fix_wsl_clock.sh
-fi
-
 # set up gpg agent if on linux
 if [ -z "$WSLENV" ]; then
     export GPG_TTY="$(tty)"

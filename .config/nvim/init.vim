@@ -46,6 +46,8 @@ autocmd FileType tex setlocal textwidth=0
 autocmd FileType sql setlocal textwidth=0
 " keep tab for sh
 autocmd FileType sh setlocal textwidth=0 noexpandtab
+" keep tab for tsv and don't linewrap
+autocmd FileType tsv setlocal textwidth=0 noexpandtab
 
 " color preferences
 set background=dark

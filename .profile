@@ -17,3 +17,10 @@ if [ "$OS" = "OpenBSD" ]; then
 		export ENV="$HOME/.kshrc"
 	fi
 fi
+
+# Setup gpg agent and ssh if on the laptop
+if [ "$(hostname -s)" = "lelantus" ]; then
+	export GPG_TTY="$(tty)"
+	export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+	gpgconf --launch gpg-agent
+fi

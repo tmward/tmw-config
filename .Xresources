@@ -1,0 +1,61 @@
+! Miscellaneous xterm tweaks
+XTerm.visualBell: true
+XTerm.vt100.geometry: 80x45
+XTerm.vt100.scrollBar: false
+XTerm.vt100.saveLines: 0
+XTerm*utf8: 1
+
+! Gruvbox colors for all Xlib applications
+*foreground: rgb:eb/db/b2
+*background: rgb:28/28/28
+
+! Gruvbox colors for xterm
+XTerm.vt100.foreground: rgb:eb/db/b2
+XTerm.vt100.background: rgb:28/28/28
+XTerm.vt100.color0: rgb:28/28/28
+XTerm.vt100.color1: rgb:cc/24/1d
+XTerm.vt100.color2: rgb:98/97/1a
+XTerm.vt100.color3: rgb:d7/99/21
+XTerm.vt100.color4: rgb:45/85/88
+XTerm.vt100.color5: rgb:b1/62/86
+XTerm.vt100.color6: rgb:68/9d/6a
+XTerm.vt100.color7: rgb:a8/99/84
+XTerm.vt100.color8: rgb:92/83/74
+XTerm.vt100.color9: rgb:fb/49/34
+XTerm.vt100.color10: rgb:b8/bb/26
+XTerm.vt100.color11: rgb:fa/bd/2f
+XTerm.vt100.color12: rgb:83/a5/98
+XTerm.vt100.color13: rgb:d3/86/9b
+XTerm.vt100.color14: rgb:8e/c0/7c
+XTerm.vt100.color15: rgb:eb/db/b2
+
+XTerm*cursorColor: rgb:fe/80/19
+
+! Gruvbox colors to fill in for bold, underlined, italic fonts
+Xterm*colorBD: rgb:fa/bd/2f
+XTerm*colorIT: rgb:d3/86/9b
+XTerm*colorUL: rgb:8e/c0/7c
+XTerm*colorRV: rgb:d6/5d/0e
+
+! Xterm font configuration
+! Ensure you add the font to your xorg.conf
+XTerm*font: -misc-spleen-medium-r-normal--16-160-72-72-c-80-iso10646-1
+XTerm*font1: -misc-spleen-medium-r-normal--8-80-72-72-c-50-iso10646-1
+XTerm*font2: -misc-spleen-medium-r-normal--12-120-72-72-c-60-iso10646-1
+XTerm*font3: -misc-spleen-medium-r-normal--16-160-72-72-c-80-iso10646-1
+XTerm*font4: -misc-spleen-medium-r-normal--24-240-72-72-c-120-iso10646-1
+XTerm*font5: -misc-spleen-medium-r-normal--32-320-72-72-c-160-iso10646-1
+! There are only 6 spleen sizes, so use the same for 6 and 7
+XTerm*font6: -misc-spleen-medium-r-normal--64-640-72-72-c-320-iso10646-1
+XTerm*font7: -misc-spleen-medium-r-normal--64-640-72-72-c-320-iso10646-1
+
+! spleen does not have a bold, underlined, italic fonts
+! boldMode to false prevents overstrike on the font
+XTerm*boldMode: false
+! The below I tried to get different colors
+! It only worked for underline for some reason
+!XTerm*colorBDMode: true
+!XTerm*colorITMode: true
+!XTerm*colorULMode: true
+!XTerm*colorRVMode: true
+!XTerm*veryBoldColors: 6

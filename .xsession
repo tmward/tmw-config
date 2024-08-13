@@ -5,6 +5,7 @@ if [ -x /usr/local/bin/dbus-launch -a -z "${DBUS_SESSION_BUS_ADDRESS}" ]; then
 fi
 
 xrdb ~/.Xresources
+redshift -l 33.95:-83.38 &
 xcompmgr &
 
 exec cwm

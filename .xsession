@@ -9,5 +9,6 @@ redshift -l 33.95:-83.38 &
 xcompmgr &
 ~/.local/bin/lemonbar.sh &
 hsetroot -solid "rgb:28/28/28" &
+xidle -ne -delay 5 -timeout 300 &
 
 exec cwm

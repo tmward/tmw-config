@@ -12,6 +12,12 @@ color urgencyborder "#b16286"
 
 fontname "spleen:pixelsize=16:antialias=false"
 
+# Customize tiling
+# Measured width of terminal preference with xwininfo(1)
+# Then calculated percent width to maximize
+vtile 66
+bind-key 4-minus window-vtile
+
 sticky yes
 
 # allow room for lemonbar

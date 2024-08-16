@@ -1,0 +1,18 @@
+# gruvbox colors
+color activeborder "#ebdbb2"
+color inactiveborder "#282828"
+# red to "r"emove from group, aqua to "a"dd
+color ungroupborder "#cc241d"
+color groupborder "#689d6a"
+color font "#ebdbb2"
+color selfont "#1d2021"
+color menubg "#282828"
+color menufg  "#d65d0e"
+color urgencyborder "#b16286"
+
+fontname "spleen:pixelsize=16:antialias=false"
+
+sticky yes
+
+# allow room for lemonbar
+gap 19 0 0 0

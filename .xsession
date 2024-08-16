@@ -7,5 +7,7 @@ fi
 xrdb ~/.Xresources
 redshift -l 33.95:-83.38 &
 xcompmgr &
+~/.local/bin/lemonbar.sh &
+hsetroot -solid "rgb:28/28/28" &
 
 exec cwm

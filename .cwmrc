@@ -52,7 +52,7 @@ bind-key MS-Tab  window-rcycle-ingroup
 bind-key 4S-x   window-close
 bind-key 4-Down window-lower
 bind-key 4-Up window-raise
-bind-key 4-f   window-fullscreen
+bind-key 4-f   window-maximize
 bind-key 4-equal   window-vmaximize
 bind-key 4S-equal   window-hmaximize
 # Customize tiling

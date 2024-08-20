@@ -5,6 +5,7 @@ set postponed = "+Drafts"
 set record="+Sent"
 set spool_file="+Inbox"
 set trash="+Trash"
+mailboxes +Inbox +Drafts +Archive +Sent +Trash +Junk +Inbox/spam
 # Cache is a folder so that a separate cache per email folder
 # I didn't set a message cache because Maildir files are already local
 set header_cache = "~/.config/neomutt/cache"
@@ -20,7 +21,17 @@ set use_envelope_from=yes
 set reverse_name=yes
 alternates "@thomasward.com"
 
-#set sidebar_visible = yes
+# Sidebar config
+set sidebar_visible = no
+set mail_check_stats = yes
+set sidebar_width = 20
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/? %?S?%S?'
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cj sidebar-next
+bind index,pager \Cl sidebar-open
+bind index,pager b sidebar-toggle-visible
 
 
 # Mailbox viewing options
@@ -33,3 +44,54 @@ ignore *
 unignore from date subject to cc
 unignore organization organisation x-mailer: x-newsreader: x-mailing-list:
 unignore posted-to:
+set markers = no # Disables the `+` displayed at line wraps
+
+# Replying/forwarding configuration
+set fast_reply = yes # skip asking for recipient when replying
+set include = yes # copy text in replying email
+set mime_forward = no # mail body forwarded as text
+set forward_attachments = yes # attachments are forwarded with mail
+set forward_format = "Fwd: %s" # format of subject when forwarding
+set forward_quote = yes # include message in forwards
+
+# Miscellaneous
+set abort_key = "<Esc>" # rather than Ctrl-G to abort prompts, set ESCDELAY=10
+set attach_save_dir = "~/Downloads"
+
+# Keybindings
+bind index g noop # need to make g noop otherwise gg will never go through
+bind index gg first-entry
+bind index j next-entry
+bind index k previous-entry
+bind attach <return> view-mailcap
+bind attach l view-mailcap
+bind editor <space> noop
+bind index G last-entry
+bind pager,attach h exit
+bind pager j next-line
+bind pager k previous-line
+bind pager l view-attachments
+bind index d delete-message
+bind index u undelete-message
+bind index D delete-thread
+bind index U undelete-thread
+bind index h noop
+bind index l display-message
+bind index,query <space> tag-entry
+#bind browser h goto-parent
+macro browser h '<change-dir><kill-line>..<enter>' "Go to parent folder"
+bind browser l select-entry
+bind browser g noop
+bind browser gg top-page
+bind browser G bottom-page
+bind pager g noop
+bind pager gg top
+bind pager G bottom
+bind index,pager,browser H top-page
+bind index,pager,browser M middle-page
+bind index,pager,browser L bottom-page
+bind index,pager,browser \004 half-down # Ctrl-D
+bind index,pager,browser \025 half-up # Ctrl-U
+bind index,pager S sync-mailbox
+bind index,pager R group-reply
+bind editor <Tab> complete-query

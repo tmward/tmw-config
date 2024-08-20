@@ -92,6 +92,6 @@ bind index,pager,browser M middle-page
 bind index,pager,browser L bottom-page
 bind index,pager,browser \004 half-down # Ctrl-D
 bind index,pager,browser \025 half-up # Ctrl-U
-bind index,pager S sync-mailbox
+macro index S "<shell-escape>mbsync -a <enter>" "Run mbsync"
 bind index,pager R group-reply
 bind editor <Tab> complete-query

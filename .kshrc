@@ -38,3 +38,7 @@ alias janet-repl="janet -e \"(import spork/netrepl) (netrepl/server)\""
 function tmp {
   cd "$(mktemp -d /tmp/$1.XXXX)"
 }
+
+# For ncurses applications, speed up Esc press to action
+ESCDELAY=10
+export ESCDELAY

@@ -1,0 +1,35 @@
+# Configure folders for neomutt
+set mbox_type = Maildir
+set folder = "~/mail"
+set postponed = "+Drafts"
+set record="+Sent"
+set spool_file="+Inbox"
+set trash="+Trash"
+# Cache is a folder so that a separate cache per email folder
+# I didn't set a message cache because Maildir files are already local
+set header_cache = "~/.config/neomutt/cache"
+
+# Sending mail options
+set sendmail="/usr/sbin/sendmail"
+set real_name="Thomas M Ward"
+set from=thomas@thomasward.com
+set use_from=yes
+set use_envelope_from=yes
+# allow for email from any user at my domain as my email setup has a
+# catchall to allow any user to deliver to my inbox
+set reverse_name=yes
+alternates "@thomasward.com"
+
+#set sidebar_visible = yes
+
+
+# Mailbox viewing options
+set sort="date"
+set use_threads=yes
+
+# Message viewing options
+# Make headers sane
+ignore *
+unignore from date subject to cc
+unignore organization organisation x-mailer: x-newsreader: x-mailing-list:
+unignore posted-to:

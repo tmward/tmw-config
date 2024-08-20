@@ -13,6 +13,7 @@ Plug 'janet-lang/janet.vim'
 Plug 'jpalardy/vim-slime'
 Plug 'tpope/vim-unimpaired'
 Plug 'vimwiki/vimwiki'
+Plug 'm4xshen/hardtime.nvim'
 
 call plug#end()
 

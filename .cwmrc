@@ -58,7 +58,7 @@ bind-key 4S-equal   window-hmaximize
 # Customize tiling
 # Measured width of terminal preference with xwininfo(1)
 # Then calculated percent width to maximize
-vtile 66
+vtile 63
 bind-key 4-minus window-vtile
 
 bind-mouse M-1  window-move

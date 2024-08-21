@@ -1,6 +1,6 @@
 ! Miscellaneous xterm tweaks
 XTerm.visualBell: true
-XTerm.vt100.geometry: 80x45
+XTerm.vt100.geometry: 88x45
 XTerm.vt100.scrollBar: false
 XTerm.vt100.saveLines: 0
 XTerm*utf8: 1

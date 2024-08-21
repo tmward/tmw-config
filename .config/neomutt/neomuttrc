@@ -35,7 +35,7 @@ bind index,pager b sidebar-toggle-visible
 
 
 # Mailbox viewing options
-set sort="date"
+set sort="last-date"
 set use_threads=yes
 
 # Message viewing options

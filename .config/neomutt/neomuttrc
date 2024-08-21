@@ -87,7 +87,7 @@ bind pager k previous-line
 bind pager l view-attachments
 bind index d delete-message
 bind index u undelete-message
-bind index D delete-thread
+bind index,pager D delete-thread
 bind index U undelete-thread
 bind index h noop
 bind index l display-message

@@ -70,7 +70,7 @@ set attach_save_dir = "~/Downloads"
 # part on the mailcap line as second in the mailcap that will
 # automatically show the attachment and use for view in the terminal
 # See https://neomutt.org/guide/mimesupport.html for more details
-auto_view text/html application/pdf
+auto_view text/html
 bind attach m view-mailcap
 bind attach l view-pager
 

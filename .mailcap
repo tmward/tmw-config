@@ -14,3 +14,5 @@ image/jpeg; feh '%s'
 # Assorted documents
 application/msword; libreoffice '%s';
 application/msword; antiword '%s'; copiousoutput;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice '%s';
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; docx2txt '%s' -; copiousoutput;

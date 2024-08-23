@@ -31,10 +31,38 @@ require("lazy").setup({
             opts = ... 
         },
         { "Olical/conjure" },
+        { "mfussenegger/nvim-lint",
+            config = function()
+                local lint = require("lint")
+                lint.linters_by_ft = {
+                    sh = { "shellcheck" }
+                }
+            end,
+            vim.keymap.set(
+                { "n", "v" },
+                "<leader>nl",
+                function() require("lint").try_lint() end
+            )
+        },
+        { "stevearc/conform.nvim",
+            -- TODO Change this when nvim updates
+            branch = "nvim-0.9",
+            opts = {
+                formatters_by_ft = {
+                    python = { "black" },
+                    r = { "styler" },
+                    sh = { "shfmt" },
+                },
+            },
+            vim.keymap.set(
+                { "n", "v" },
+                "<leader>nf",
+                function() require("conform").format() end
+            )
+        },
         { "R-nvim/R.nvim",
             lazy = false
         },
-        -- TODO Add conform.nvim to replace neomake/neoformat
         { "nvim-treesitter/nvim-treesitter",
             build = ":TSUpdate",
             config = function()

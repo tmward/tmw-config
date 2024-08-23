@@ -42,7 +42,10 @@ require("lazy").setup({
                 { "n", "v" },
                 "<leader>nl",
                 function() require("lint").try_lint() end
-            )
+            ),
+            -- make it easy to navigate between "diagnostics" linters generate
+            vim.keymap.set("n", "]g", vim.diagnostic.goto_next),
+            vim.keymap.set("n", "[g", vim.diagnostic.goto_prev),
         },
         { "stevearc/conform.nvim",
             -- TODO Change this when nvim updates

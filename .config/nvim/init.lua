@@ -139,7 +139,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 -- writing formats: semantic line breaks, so disable textwidth
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = {"groff", "markdown", "tex"},
+    pattern = {"groff", "markdown", "tex", "toml"},
     callback = function()
         vim.opt_local.textwidth = 0
     end

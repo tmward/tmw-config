@@ -25,6 +25,7 @@ vim.g.maplocalleader = ";"
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
+        { "tpope/vim-fugitive" },
         { "ellisonleao/gruvbox.nvim",
             priority = 1000,
             config = true,

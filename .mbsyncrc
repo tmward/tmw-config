@@ -1,0 +1,23 @@
+IMAPAccount thomasward
+Host mail.thomasward.com
+Port 993
+User thomas@thomasward.com
+PassCmd "pass show email/thomas@thomasward.com | head -n 1"
+SSLType IMAPS
+
+IMAPStore thomasward-remote
+Account thomasward
+
+MaildirStore thomasward-local
+Path ~/.local/share/mail/
+Inbox ~/.local/share/mail/Inbox
+SubFolders Verbatim
+
+Channel thomasward
+Far :thomasward-remote:
+Near :thomasward-local:
+Patterns *
+Create Both
+Expunge Both
+SyncState *
+CopyArrivalDate yes

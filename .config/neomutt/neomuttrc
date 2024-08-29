@@ -61,6 +61,12 @@ set forward_quote = yes # include message in forwards
 set abort_key = "<Esc>" # rather than Ctrl-G to abort prompts, set ESCDELAY=10
 set attach_save_dir = "~/Downloads"
 
+# Use khard to access contacts that were synced with vdirsyncer
+set query_command = "khard email -p %s"
+macro index,pager A \
+  "<pipe-message>khard add-email --headers=from,cc,to --skip-already-added<return>" \
+  "add the sender and cc email addresses to khard"
+
 # Viewing attachments
 # lets you use "l" to autoview things in a text mode (if a mailcap entry
 # exists with "copiousoutput" it'll process it to look nicer),
@@ -106,6 +112,7 @@ bind index,pager,browser M middle-page
 bind index,pager,browser L bottom-page
 bind index,pager,browser \004 half-down # Ctrl-D
 bind index,pager,browser \025 half-up # Ctrl-U
-macro index S "<shell-escape>mbsync -a <enter>" "Run mbsync"
+macro index S "<shell-escape>vdirsyncer sync && mbsync -a <enter>" \
+    "Sync addresses and email"
 bind index,pager R group-reply
 bind editor <Tab> complete-query

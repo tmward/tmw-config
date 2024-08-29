@@ -1,6 +1,6 @@
 # Configure folders for neomutt
 set mbox_type = Maildir
-set folder = "~/mail"
+set folder = "~/.local/share/mail"
 set postponed = "+Drafts"
 set record="+Sent"
 set spool_file="+Inbox"

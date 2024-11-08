@@ -16,7 +16,7 @@ SubFolders Verbatim
 Channel thomasward
 Far :thomasward-remote:
 Near :thomasward-local:
-Patterns *
+Patterns * INBOX*
 Create Both
 Expunge Both
 SyncState *

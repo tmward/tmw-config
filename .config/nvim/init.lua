@@ -49,8 +49,6 @@ require("lazy").setup({
             vim.keymap.set("n", "[g", vim.diagnostic.goto_prev),
         },
         { "stevearc/conform.nvim",
-            -- TODO Change this when nvim updates
-            branch = "nvim-0.9",
             opts = {
                 formatters_by_ft = {
                     python = { "black" },

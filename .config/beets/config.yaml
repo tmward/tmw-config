@@ -1,0 +1,8 @@
+plugins: fetchart lastgenre fromfilename permissions
+directory: /var/navidrome/music
+library: ~/.local/share/beets/beetslibrary.db
+permissions:
+  file: 640
+  dir: 750
+import:
+  move: yes

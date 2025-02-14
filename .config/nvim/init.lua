@@ -75,6 +75,7 @@ require("lazy").setup({
                         "git_config", "gitcommit", "gitignore", "go", "gpg",
                         "html", "janet_simple", "lua", "make",
                         "markdown", "muttrc", "perl", "python", "r", "sql",
+                        "rnoweb", "yaml",
                         "ssh_config", "tmux", "tsv", "vim", "vimdoc", "xml"
                     },
                     sync_install = false,

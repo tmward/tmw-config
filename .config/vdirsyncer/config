@@ -3,7 +3,7 @@ status_path = "~/.config/vdirsyncer/status/"
 
 [pair my_contacts]
 a = "my_contacts_local"
-b = "my_contacts_remote"
+b = "my_contacts_baikal"
 collections = ["from a", "from b"]
 
 [storage my_contacts_local]
@@ -11,7 +11,7 @@ type = "filesystem"
 path = "~/.local/share/vdirsyncer/contacts/"
 fileext = ".vcf"
 
-[storage my_contacts_remote]
+[storage my_contacts_baikal]
 type = "carddav"
 url = "https://radicale.thomasward.com"
 username = "thomas"
@@ -19,7 +19,7 @@ password.fetch = [ "command", "~/.local/bin/get_pass.sh", "computers/radicale" ]
 
 [pair my_calendars]
 a = "my_calendars_local"
-b = "my_calendars_remote"
+b = "my_calendars_baikal"
 collections = ["from a", "from b"]
 
 [storage my_calendars_local]
@@ -27,7 +27,7 @@ type = "filesystem"
 path = "~/.local/share/vdirsyncer/calendars/"
 fileext = ".ics"
 
-[storage my_calendars_remote]
+[storage my_calendars_baikal]
 type = "caldav"
 url = "https://radicale.thomasward.com"
 username = "thomas"

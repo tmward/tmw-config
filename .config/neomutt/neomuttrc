@@ -5,7 +5,7 @@ set postponed = "+Drafts"
 set record="+Sent"
 set spool_file="+Inbox"
 set trash="+Trash"
-mailboxes +Inbox +Drafts +Archive +Sent +Trash +Junk +Inbox/spam
+mailboxes +Inbox +Drafts +Archive +Sent +Trash +Postmaster +Junk +Inbox/spam
 # Cache is a folder so that a separate cache per email folder
 # I didn't set a message cache because Maildir files are already local
 set header_cache = "~/.config/neomutt/cache"
